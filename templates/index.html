@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="refresh" content="10">
+        <title>Network Monitor</title>
+        <style>
+            body {
+            font-family: Arial;
+            background-color: #f4f6f9;
+            margin: 40px;
+            }
+            h1 {
+                color: #1e3a8a;
+            }
+            table {
+                border-collapse: collapse;
+                width: 70%;
+                background-color: white;
+            }
+            th {
+                background-color: #1e3a8a;
+                color: white;
+                padding: 12px;
+            }
+            td {
+                padding: 12px;
+                border: 1px solid #ccc;
+                text-align: center;
+            }
+            .online {
+                color: green;
+                font-weight: bold;
+            }
+            .offline {
+                color: red;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Network Monitoring Dashboard</h1>
+        <table>
+        <tr>
+            <th>IP Address</th>
+            <th>Status</th>
+        </tr>
+            {% for device in results %}
+        <tr>
+<td>{{ device.ip }}</td>
+            <td class="
+            {% if device.status == 'ONLINE' %}
+            online
+            {% else %}
+            offline
+            {% endif %}
+            ">
+            {{ device.status }}
+        </td>
+        </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>
