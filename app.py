@@ -4,11 +4,14 @@ import subprocess
 app = Flask(__name__)
 
 devices = [
-    "8.8.8.8",
-    "1.1.1.1",
-    "192.168.1.1",
-    "google.com",
-    "10.255.255.1"
+    "Device ID
+Hostname
+IP Address
+Device Type
+Location
+Status
+Last Seen
+Latency"
 ]
 
 @app.route("/")
