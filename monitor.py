@@ -2,6 +2,7 @@ import subprocess
 devices = [
     "8.8.8.8",
     "1.1.1.1",
+    "google.com",
     "192.168.1.1"
 ]
 for ip in devices:
